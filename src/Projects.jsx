@@ -241,6 +241,27 @@ export default function Projects() {
                 each card's key. Verified onchain via EIP-7212.
               </p>
             </article>
+            <article className="card">
+              <span className="card-tag">solidity · erc-20</span>
+              <h3>
+                <a href="https://github.com/fidelity/mintable-token-ethereum-contract/blob/main/contracts/MintableToken.sol" target="_blank" rel="noreferrer">mintable-token-ethereum-contract ↗</a>
+              </h3>
+              <p>
+                Fidelity's <code>MintableToken</code> — the UUPS-upgradeable, role-gated
+                ERC-20 behind the Fidelity Digital Dollar (FIDD). Issuance, compliance,
+                and upgrade authority split across separate roles.
+              </p>
+            </article>
+            <article className="card">
+              <span className="card-tag">solidity · amm</span>
+              <h3>
+                <a href="https://github.com/balancer/balancer-v2-monorepo/pulls?q=is%3Apr+state%3Aclosed+sort%3Acreated-asc" target="_blank" rel="noreferrer">balancer-v2-monorepo ↗</a>
+              </h3>
+              <p>
+                The Balancer V2 Vault — single-custody AMM core. Link goes to the
+                earliest PRs, where the first-draft Vault implementation landed.
+              </p>
+            </article>
           </div>
         </section>
 
