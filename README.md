@@ -22,7 +22,7 @@ Every push to `main` triggers `.github/workflows/deploy.yml`, which runs `npm ru
    git init -b main
    git add .
    git commit -m "Initial site"
-   git remote add origin git@github.com:gregtaschuk/pyriteship.git
+   git remote add origin git@github.com:PyriteShip/pyriteship.git
    git push -u origin main
    ```
 2. **Enable Pages**: Repo → Settings → Pages → Source: **GitHub Actions**.
@@ -48,9 +48,9 @@ Delete any GoDaddy-default `A @ → Parked` record first.
 
 | Type  | Name | Value                 | TTL     |
 |-------|------|-----------------------|---------|
-| CNAME | www  | taschuk.github.io.    | 1 hour  |
+| CNAME | www  | pyriteship.github.io. | 1 hour  |
 
-(Replace `taschuk` with your actual GitHub username if different.)
+(`pyriteship` is the GitHub org that owns the repo — [PyriteShip/pyriteship](https://github.com/PyriteShip/pyriteship).)
 
 ### Email (optional, later)
 
@@ -62,7 +62,7 @@ After DNS propagates (usually 15–60 min for a fresh domain):
 
 ```bash
 dig pyrite.rocks +short          # should list the four 185.199.x.153 IPs
-dig www.pyrite.rocks +short      # should CNAME to taschuk.github.io
+dig www.pyrite.rocks +short      # should CNAME to pyriteship.github.io
 curl -I https://pyrite.rocks     # 200 OK once cert is provisioned
 ```
 

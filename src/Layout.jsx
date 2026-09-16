@@ -1,4 +1,5 @@
-import { Outlet, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
+import { Outlet, useLocation, useNavigate } from 'react-router-dom'
 import PyriteBackground from './PyriteBackground.jsx'
 
 function scrollToId(id) {
@@ -12,9 +13,24 @@ function scrollToId(id) {
 }
 
 export default function Layout() {
-  const { pathname } = useLocation()
+  const { pathname, state } = useLocation()
+  const navigate = useNavigate()
   const isHome = pathname === '/' || pathname === ''
   const isProjects = pathname === '/projects'
+
+  // Section links off the homepage navigate home, then scroll once it renders.
+  useEffect(() => {
+    if (isHome && state?.scrollTo) {
+      document.getElementById(state.scrollTo)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [isHome, state])
+
+  function goHomeTo(id) {
+    return (e) => {
+      e.preventDefault()
+      navigate('/', { state: { scrollTo: id } })
+    }
+  }
   return (
     <>
       <PyriteBackground />
@@ -35,6 +51,7 @@ export default function Layout() {
             <>
               <a href="#/">home</a>
               <a href="#/projects" aria-current={isProjects ? 'page' : undefined}>projects</a>
+              <a href="#/" onClick={goHomeTo('experience')}>experience</a>
               <a href="mailto:greg@pyrite.rocks" className="cta">gm →</a>
             </>
           )}

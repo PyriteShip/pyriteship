@@ -9,20 +9,24 @@ export default function Projects() {
             <span className="accent"><span className="heroEmphasis">how</span> and why.</span>
           </h1>
           <p className="lede">
-            Three projects that show how I think about protocol design, smart contract
-            authorship, and shipping onchain systems end-to-end.
+            Projects that show how I think about protocol design, smart contract
+            authorship, and shipping onchain systems end-to-end — plus the open
+            source libraries that fell out of building them.
           </p>
         </section>
 
         <section className="section">
           <article className="card card-long">
-            <span className="card-tag">poc</span>
-            <h3>Tool Library — hardware-bound NFC rental escrow</h3>
-            <p className="card-stack">solidity · base l2 · java card · react native · the graph</p>
+            <span className="card-tag">beta</span>
+            <h3>Pyrite Rent — hardware-bound NFC rental escrow</h3>
+            <p className="card-stack">solidity · base l2 · java card · react native · xmtp · the graph</p>
             <p>
-              A personal proof-of-concept side project exploring what happens when you
-              bind a physical object to an onchain identity through a tamper-resistant
-              secure element. A peer-to-peer physical tool rental platform where every tool carries a
+              <a href="https://pyrite.rent" target="_blank" rel="noreferrer">pyrite.rent</a>{' '}
+              started as a side project exploring what happens when you bind a physical
+              object to an onchain identity through a tamper-resistant secure element.
+              Now it's a product in beta —{' '}
+              <a href="https://pyrite.rent/beta" target="_blank" rel="noreferrer">join the beta ↗</a>.
+              A peer-to-peer physical tool rental platform where every tool carries a
               hardware NFC JavaCard acting as its cryptographic identity. Handoffs
               between lender and borrower are proven by physically tapping the card:
               it signs a fresh challenge with an on-card P-256 key that never leaves
@@ -90,7 +94,8 @@ export default function Projects() {
               Solidity (Foundry + Hardhat), NFC Java Card applet, a
               provisioner CLI that flashes blank cards over USB NFC via GlobalPlatform
               and mints the matching NFT, a The Graph subgraph,
-              and a React Native mobile client.
+              and a React Native mobile client. The reusable pieces are open
+              source — see below.
             </p>
           </article>
         </section>
@@ -200,7 +205,46 @@ export default function Projects() {
           </article>
         </section>
 
-        <section className="section section-alt">
+        <section id="open-source" className="section section-alt">
+          <h2>// open source</h2>
+          <div className="grid">
+            <article className="card">
+              <span className="card-tag">rn · xmtp</span>
+              <h3>
+                <a href="https://github.com/PyriteShip/xmtp-chat-rn" target="_blank" rel="noreferrer">xmtp-chat-rn ↗</a>
+              </h3>
+              <p>
+                Wallet-native 1:1 messaging for React Native on XMTP. Client lifecycle,
+                hooks, optimistic send, receipts, and chat components. E2EE via MLS,
+                no messaging vendor.
+              </p>
+            </article>
+            <article className="card">
+              <span className="card-tag">rn · wagmi</span>
+              <h3>
+                <a href="https://github.com/PyriteShip/cdp-wagmi-rn" target="_blank" rel="noreferrer">cdp-wagmi-rn ↗</a>
+              </h3>
+              <p>
+                Coinbase CDP embedded smart-account wallet as a bare React Native wagmi
+                connector (New Architecture), with ERC-1271 / ERC-6492 signing and
+                sponsored sends.
+              </p>
+            </article>
+            <article className="card">
+              <span className="card-tag">javacard</span>
+              <h3>
+                <a href="https://github.com/gregtaschuk/p256-rental-kit" target="_blank" rel="noreferrer">p256-rental-kit ↗</a>
+              </h3>
+              <p>
+                Hardware-bound P-256 identity for Ethereum. JavaCard signer applet plus
+                an ACR122U provisioner CLI that flashes cards and mints NFTs bound to
+                each card's key. Verified onchain via EIP-7212.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section className="section">
           <h2>// get in touch</h2>
           <p className="contact-lede">
             If you want something like one of these built — or audited, or rescued —
