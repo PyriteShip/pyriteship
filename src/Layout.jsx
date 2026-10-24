@@ -61,7 +61,7 @@ export default function Layout() {
       <Outlet />
 
       <footer>
-        <span>◆ pyrite consulting llc · {new Date().getFullYear()}</span>
+        <span>◆ pyrite consulting llc · {new Date().getFullYear()} · operator of <a href="https://pyrite.rent" target="_blank" rel="noreferrer">pyrite.rent</a></span>
         <span className="footer-tag">seattle / remote / worldwide</span>
       </footer>
     </>
