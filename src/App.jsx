@@ -12,6 +12,11 @@ export default function App() {
             Pyrite is Greg Taschuk's consulting business. Architecture, smart contracts,
             backends, indexing, and the infrastructure around them.
           </p>
+          <p className="lede">
+            Pyrite Consulting LLC also builds and runs{' '}
+            <a href="https://pyrite.rent" target="_blank" rel="noreferrer">Pyrite</a>, a peer-to-peer
+            gear rental app in Seattle.
+          </p>
           <div className="hero-cta">
             <a
               href="#/"
