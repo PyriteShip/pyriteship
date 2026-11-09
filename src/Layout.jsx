@@ -18,6 +18,17 @@ export default function Layout() {
   const isHome = pathname === '/' || pathname === ''
   const isProjects = pathname === '/projects'
 
+  // The site uses hash routes (/#/projects), which GA would otherwise record
+  // as "/", so each route change sends its own page_view with the route path.
+  useEffect(() => {
+    if (typeof window.gtag !== 'function') return
+    window.gtag('event', 'page_view', {
+      page_path: pathname || '/',
+      page_location: window.location.origin + (pathname || '/'),
+      page_title: document.title,
+    })
+  }, [pathname])
+
   // Section links off the homepage navigate home, then scroll once it renders.
   useEffect(() => {
     if (isHome && state?.scrollTo) {
