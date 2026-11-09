@@ -22,6 +22,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Google tag (gtag.js). Page views are sent from Layout.jsx on each
+         hash route change, so the config call turns off the automatic one. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QXMJHTCPBZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QXMJHTCPBZ', { send_page_view: false });
+    </script>
     <title>Pyrite Consulting — Ship blockchain code.</title>
   </head>
   <body>
