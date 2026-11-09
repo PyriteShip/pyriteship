@@ -102,6 +102,35 @@ export default function Projects() {
 
         <section className="section section-alt">
           <article className="card card-long">
+            <span className="card-tag">in progress</span>
+            <h3>Hobo Taxi — cost-sharing intercity rides</h3>
+            <p className="card-stack">typescript · fastify · react · postgres + postgis · twilio · tesla fleet api</p>
+            <p>
+              An early-stage side project, still being built. Drivers already making
+              an intercity trip (say Seattle → Portland) fill empty seats with riders
+              along the way, who split the cost. Prices are capped by formula so
+              drivers only ever recover their share of the trip, never profit.
+            </p>
+            <p>
+              <strong>The idea.</strong> Zero taps while driving. It's SMS-first:
+              a Tesla driver starts a trip, and ride offers arrive as texts the car
+              reads aloud and answers by voice. Riders post standby requests ahead of
+              time on a mobile web app and see match odds computed from routes linked
+              drivers actually drive. Matching works on highway interchange sequences
+              rather than addresses, and only suggests a rider when the detour stays
+              under 15% of the driver's trip.
+            </p>
+            <p className="card-role">
+              <strong>Status.</strong> Work in progress. Matching, pricing, the SMS
+              flows and the web app are built; next up is a small friends-and-family
+              beta on the I-5 corridor to see whether the matching holds up on real
+              trips.
+            </p>
+          </article>
+        </section>
+
+        <section className="section">
+          <article className="card card-long">
             <span className="card-tag">stablecoin</span>
             <h3>Fidelity Digital Dollar — <code>MintableToken</code></h3>
             <p className="card-stack">solidity · openzeppelin upgradeable · fidelity digital assets</p>
@@ -157,7 +186,7 @@ export default function Projects() {
           </article>
         </section>
 
-        <section className="section">
+        <section className="section section-alt">
           <article className="card card-long">
             <span className="card-tag">amm</span>
             <h3>Balancer V2 — the Vault</h3>
@@ -205,7 +234,7 @@ export default function Projects() {
           </article>
         </section>
 
-        <section id="open-source" className="section section-alt">
+        <section id="open-source" className="section">
           <h2>// open source</h2>
           <div className="grid">
             <article className="card">
@@ -265,7 +294,7 @@ export default function Projects() {
           </div>
         </section>
 
-        <section className="section">
+        <section className="section section-alt">
           <h2>// get in touch</h2>
           <p className="contact-lede">
             If you want something like one of these built — or audited, or rescued —
