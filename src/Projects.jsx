@@ -103,10 +103,10 @@ export default function Projects() {
         <section className="section section-alt">
           <article className="card card-long">
             <span className="card-tag">in progress</span>
-            <h3>Hobo Taxi — cost-sharing intercity rides</h3>
+            <h3>BohoTaxi — cost-sharing intercity rides</h3>
             <p className="card-stack">typescript · fastify · react · postgres + postgis · twilio · tesla fleet api</p>
             <p>
-              <a href="https://hobotaxi.app" target="_blank" rel="noreferrer">hobotaxi.app</a>{' '}
+              <a href="https://boho.taxi" target="_blank" rel="noreferrer">boho.taxi</a>{' '}
               is an early-stage side project, still being built. Drivers already making
               an intercity trip (say Seattle → Portland) fill empty seats with riders
               along the way, who split the cost. Prices are capped by formula so
